@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --steelblue: steelblue;
+  --lightgray: #ccc;
+  --darkgray: #666;
+
+  --input-border-color: var(--lightgray);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+main {
+  padding: 0 100px;
+}
+
+.header-container {
+  margin-bottom: 50px;
+}
+
+.main-header {
+  font-size: 3em;
+  color: var(--steelblue);
+  margin-bottom: 0;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.todo-list__item,
+.todo-list__empty {
+  display: flex;
+  font-size: 1.4em;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.todo-list__empty {
+  margin-top: 100px;
+  justify-content: center;
+  color: var(--darkgray);
+}
+
+.todo-list__item + .todo-list__item {
+  border-top: 1px solid var(--steelblue);
+}
+
+.todo-list__item--completed {
+  text-decoration: line-through;
+}
+
+.todo-list__item-text {
+  flex-grow: 1;
+}
+
+.add-todo {
+  display: flex;
+  font-size: 2rem;
+}
+
+.add-todo--has-focus {
+  --input-border-color: var(--steelblue);
+}
+
+.add-todo__input {
+  display: inline-block;
+  flex-grow: 1;
+  font-size: inherit;
+  height: 50px;
+  border: 1px solid var(--input-border-color);
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 10px 20px;
+}
+
+.add-todo__input:focus {
+  outline: none;
+}
+
+.add-todo__btn::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 0;
+  width: 1px;
+  background-color: var(--input-border-color);
+}
+
+.add-todo__btn {
+  position: relative;    
+  flex-basis: 50px;
+  border: none;
+  background: transparent;
+  border: 1px solid var(--input-border-color);
+  border-left: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: inherit;
+  height: 50px;
+  color: var(--input-border-color);
+  cursor: pointer;
+}
+
+.add-todo__btn:focus {
+  outline: none;  
+}
+
+.add-todo__btn:hover {
+  font-size: 1.1em;
+}
+
+.filter-group {
+  display: flex;
+  margin-top: 20px;
+}
+
+.filter-link {
+  flex-grow: 1;
+  text-align: center;
+  color: var(--lightgray);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter-link + .filter-link {
+  border-left: 1px solid var(--steelblue);
+}
+
+.filter-link--active {
+  color: var(--steelblue);
+}
