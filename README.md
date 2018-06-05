@@ -1,5 +1,7 @@
 # Sodot
 
+![](https://image.ibb.co/ezS6k8/sodot.gif)
+
 This world... needs more todo apps.
 
 This is just another simple todos app made with React and Redux. No other deps other than the ones that come with `create-react-app`.
